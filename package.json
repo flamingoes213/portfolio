@@ -1,0 +1,23 @@
+{
+  "name": "developer-portfolio",
+  "version": "1.0.0",
+  "description": "Premium developer portfolio website featuring dark/light modes, animations, and modular grids.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server . -p 3000",
+    "start": "npx -y http-server . -p 3000"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "javascript",
+    "glassmorphic"
+  ],
+  "author": "Aria Emira",
+  "license": "MIT"
+}

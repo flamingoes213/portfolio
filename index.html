@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fathima Hiba V K - First-Year B.Tech Student. Aspiring Cybersecurity Professional and Technology Enthusiast. Portfolio highlighting interests in cybersecurity, Python programming, networking, and Linux security.">
+    <title>Fathima Hiba V K | Cybersecurity Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Live Network Background -->
+    <canvas id="network-bg" aria-hidden="true"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Hiba<span class="logo-accent">.cyber /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#learning-journey" class="nav-link">Journey</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle visual theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section section">
+            <div class="container hero-container grid">
+                <div class="hero-content">
+                    <div class="badge fade-in">Aspiring Cybersecurity Professional and Technology Enthusiast</div>
+                    <h1 class="hero-title fade-in">
+                        Hi, I'm <span class="text-glow">FATHIMA HIBA V K</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in">
+                        Building <span class="typed-text" id="typing-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-desc fade-in">
+                        I am a first-year B.Tech student with a strong interest in Cybersecurity, Networking, and Software Development. Having completed my higher secondary education under the CBSE curriculum, I am actively building my technical skills through hands-on learning, TryHackMe labs, Python programming, Linux, and networking. My goal is to develop expertise in cybersecurity and contribute to creating secure digital systems.
+                    </p>
+                    <div class="hero-ctas fade-in">
+                        <a href="Fathima_Hiba_V_K_Resume.pdf" download="Fathima_Hiba_V_K_Resume.pdf" class="btn btn-primary">
+                            <span>Download Resume</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="#projects" class="btn btn-outline">Explore Projects</a>
+                    </div>
+                    <div class="hero-socials fade-in">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in">
+                    <div class="hero-image-border">
+                        <div class="hero-image-content">
+                            <!-- Visual Graphic using CSS/SVG instead of a dead placeholder -->
+                            <div class="code-art-window">
+                                <div class="window-header">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                    <span class="window-title">hiba@cyber-lab:~</span>
+                                </div>
+                                <div class="window-body">
+                                    <pre><code><span class="token-comment"># Executing network port scanner...</span>
+<span class="token-prompt">hiba@cyber-lab:~$</span> python3 port_scanner.py -t 10.0.0.1
+<span class="token-success">[+] Initiating scan on host: 10.0.0.1</span>
+<span class="token-success">[+] Scanning ports 1-1024...</span>
+[+] Port 22 (SSH)    - <span class="token-open">OPEN</span>
+[+] Port 80 (HTTP)   - <span class="token-open">OPEN</span>
+[+] Port 443 (HTTPS) - <span class="token-open">OPEN</span>
+<span class="token-success">[+] Scan complete. 3 open ports found.</span>
+<span class="token-prompt">hiba@cyber-lab:~$</span> <span class="token-cursor-blink">_</span></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div class="section-title-wrapper text-center">
+                    <span class="section-badge">Biography</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid grid">
+                    <div class="about-card glass">
+                        <h3>My Story</h3>
+                        <p>
+                            I am a first-year B.Tech student with a strong interest in Cybersecurity, Networking, and Software Development. Having completed my higher secondary education under the CBSE curriculum, I am actively building my technical skills through hands-on learning, TryHackMe labs, Python programming, Linux, and networking. My goal is to develop expertise in cybersecurity and contribute to creating secure digital systems.
+                        </p>
+                        <p>
+                            I thrive on solving complex technical challenges, configuration analysis, hardening environments, and script automation.
+                        </p>
+                        <div class="about-stats grid">
+                            <div class="stat-box">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Class 10 Score</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Labs Completed</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Tech Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tabs-container glass">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="edu">Education</button>
+                            <button class="tab-btn" data-tab="exp">Core Coursework</button>
+                            <button class="tab-btn" data-tab="cert">Technical Focus</button>
+                        </div>
+                        <div class="tabs-content">
+                            <!-- Tab: Education -->
+                            <div class="tab-pane active" id="edu">
+                                <ul class="tab-list-items">
+                                    <li>
+                                        <span class="tab-item-date">2025 - Present</span>
+                                        <h4>B.Tech in Computer Science & Engineering</h4>
+                                        <p>First-year undergraduate program focusing on core computing, programming standards, and mathematics.</p>
+                                    </li>
+                                    <li>
+                                        <span class="tab-item-date">2023 - 2025</span>
+                                        <h4>Higher Secondary Education (CBSE)</h4>
+                                        <p>Completed higher secondary schooling under the CBSE curriculum with core science and computer science disciplines.</p>
+                                    </li>
+                                    <li>
+                                        <span class="tab-item-date">2021 - 2023</span>
+                                        <h4>Secondary Education (CBSE) - Class 10 (85%)</h4>
+                                        <p>Completed with an aggregate score of 85% under the CBSE curriculum.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Tab: Coursework -->
+                            <div class="tab-pane" id="exp">
+                                <ul class="tab-list-items">
+                                    <li>
+                                        <h4>🐍 Python Programming</h4>
+                                        <p>Scripting automation utilities, basic network sockets, and algorithms.</p>
+                                    </li>
+                                    <li>
+                                        <h4>🌐 Networking Fundamentals</h4>
+                                        <p>Studying TCP/IP stack, subnetting, network packets, protocols, and ports.</p>
+                                    </li>
+                                    <li>
+                                        <h4>🗄️ SQL & Relational Databases</h4>
+                                        <p>Writing queries, structuring schemas, and understanding database administration.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Tab: Technical Focus -->
+                            <div class="tab-pane" id="cert">
+                                <ul class="tab-list-items">
+                                    <li>
+                                        <h4>🐧 Linux Administration</h4>
+                                        <p>Understanding the Linux terminal, directory tree, permission bits, and bash scripting.</p>
+                                    </li>
+                                    <li>
+                                        <h4>🛡️ Cybersecurity Fundamentals</h4>
+                                        <p>Learning vulnerabilities, penetration testing foundations, and hands-on TryHackMe rooms.</p>
+                                    </li>
+                                    <li>
+                                        <h4>🔧 Git & Version Control</h4>
+                                        <p>Managing repositories, branch flows, commits, and open-source contributions on GitHub.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section reveal">
+            <div class="container">
+                <div class="section-title-wrapper text-center">
+                    <span class="section-badge">Capabilities</span>
+                    <h2 class="section-title">My Technical Stack</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-grid grid">
+                    <!-- Programming & Databases -->
+                    <div class="skills-card glass">
+                        <div class="skills-card-header">
+                            <svg class="skill-group-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <h3>Programming & DBs</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python (Scripting & Sockets)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>SQL (Queries & Schema Structure)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML / CSS</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security & Networking -->
+                    <div class="skills-card glass">
+                        <div class="skills-card-header">
+                            <svg class="skill-group-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <h3>Security & Networking</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Networking Fundamentals (TCP/IP)</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Cybersecurity Fundamentals</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Ethical Hacking & THM Labs</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Systems & Tools -->
+                    <div class="skills-card glass">
+                        <div class="skills-card-header">
+                            <svg class="skill-group-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                            <h3>Systems & Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Linux Commands & Shell</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git & GitHub Workflow</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>VirtualBox / Virtual Labs</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="container">
+                <div class="section-title-wrapper text-center">
+                    <span class="section-badge">Showcase</span>
+                    <h2 class="section-title">Technical Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="python">Python Scripts</button>
+                    <button class="filter-btn" data-filter="labs">Security Labs</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                </div>
+
+                <!-- Projects Display Grid -->
+                <div class="projects-grid grid" id="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass" data-category="python" data-project-id="1">
+                        <div class="project-thumbnail">
+                            <div class="project-img-placeholder prj-grad-1">
+                                <div class="project-overlay-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Python Scripts</span>
+                            <h3>TCP Port Scanner</h3>
+                            <p>A multi-threaded port scanner built in Python to perform quick security reconnaissance by checking state TCP connections.</p>
+                            <div class="project-meta-links">
+                                <span class="view-details-link">Read Details →</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass" data-category="python" data-project-id="2">
+                        <div class="project-thumbnail">
+                            <div class="project-img-placeholder prj-grad-2">
+                                <div class="project-overlay-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Python Scripts</span>
+                            <h3>Basic Network Scanner</h3>
+                            <p>An ARP requests-based network reconnaissance script designed to identify active IP nodes on the local subnet.</p>
+                            <div class="project-meta-links">
+                                <span class="view-details-link">Read Details →</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass" data-category="labs" data-project-id="3">
+                        <div class="project-thumbnail">
+                            <div class="project-img-placeholder prj-grad-3">
+                                <div class="project-overlay-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Security Labs</span>
+                            <h3>Linux Security Lab</h3>
+                            <p>A virtual lab simulating network hardening, firewall configurations, and log-monitoring setups on a secure Linux baseline.</p>
+                            <div class="project-meta-links">
+                                <span class="view-details-link">Read Details →</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass" data-category="upcoming" data-project-id="4">
+                        <div class="project-thumbnail">
+                            <div class="project-img-placeholder prj-grad-4">
+                                <div class="project-overlay-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Upcoming</span>
+                            <h3>Active Directory Security Lab</h3>
+                            <p>Plans to configure a Virtual Forest domain controller environment for privilege escalations analysis and security testing.</p>
+                            <div class="project-meta-links">
+                                <span class="view-details-link">Read Details →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub Repository Showcase Section -->
+                <div class="github-showcase">
+                    <h3 class="github-showcase-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        GitHub Project Showcase
+                    </h3>
+                    <p class="github-showcase-desc">Explore live repository directories and source files hosted directly on GitHub.</p>
+                    
+                    <div class="github-grid grid">
+                        <!-- Repo 1 -->
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-card glass">
+                            <div>
+                                <div class="repo-header">
+                                    <svg class="repo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                                    <span class="repo-name">tcp-port-scanner</span>
+                                </div>
+                                <p class="repo-desc">Socket-based multithreaded TCP port scanner script designed for secure port scanning.</p>
+                            </div>
+                            <div class="repo-footer">
+                                <div class="repo-lang">
+                                    <span class="lang-color lang-python"></span>
+                                    <span>Python</span>
+                                </div>
+                                <div class="repo-stats">
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <span>14</span>
+                                    </div>
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+                                        <span>4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Repo 2 -->
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-card glass">
+                            <div>
+                                <div class="repo-header">
+                                    <svg class="repo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                                    <span class="repo-name">network-recon-scanner</span>
+                                </div>
+                                <p class="repo-desc">Reconnaissance scripts using standard socket modules to scan subnet ranges for active hosts.</p>
+                            </div>
+                            <div class="repo-footer">
+                                <div class="repo-lang">
+                                    <span class="lang-color lang-python"></span>
+                                    <span>Python</span>
+                                </div>
+                                <div class="repo-stats">
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <span>9</span>
+                                    </div>
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Repo 3 -->
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-card glass">
+                            <div>
+                                <div class="repo-header">
+                                    <svg class="repo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                                    <span class="repo-name">linux-hardening-lab</span>
+                                </div>
+                                <p class="repo-desc">Configuration files, UFW firewalls scripts, and log monitoring scripts used in Linux security labs.</p>
+                            </div>
+                            <div class="repo-footer">
+                                <div class="repo-lang">
+                                    <span class="lang-color lang-shell"></span>
+                                    <span>Shell</span>
+                                </div>
+                                <div class="repo-stats">
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <span>12</span>
+                                    </div>
+                                    <div class="repo-stat-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Journey Section -->
+        <section id="learning-journey" class="section reveal">
+            <div class="container">
+                <div class="section-title-wrapper text-center">
+                    <span class="section-badge">Roadmap & Progress</span>
+                    <h2 class="section-title">My Learning Journey</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="learning-journey-grid grid">
+                    <!-- TryHackMe Profile widget -->
+                    <div class="thm-stats-card glass">
+                        <div class="thm-header">
+                            <div class="thm-logo">
+                                <svg class="thm-logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                                </svg>
+                                <h3>TryHackMe Progress</h3>
+                            </div>
+                            <span class="thm-badge">Top 10%</span>
+                        </div>
+                        
+                        <div class="thm-body">
+                            <div class="thm-circle-container">
+                                <svg class="thm-circle-svg">
+                                    <circle class="thm-circle-bg" cx="70" cy="70" r="55"></circle>
+                                    <circle class="thm-circle-fill" cx="70" cy="70" r="55"></circle>
+                                </svg>
+                                <div class="thm-circle-text">
+                                    <span class="thm-percent">80%</span>
+                                    <span class="thm-percent-label">Finished</span>
+                                </div>
+                            </div>
+
+                            <div class="thm-details">
+                                <div class="thm-stat-row">
+                                    <span class="thm-stat-name">Current Rank</span>
+                                    <span class="thm-stat-val">Top 10% <span>(Level 9)</span></span>
+                                </div>
+                                <div class="thm-stat-row">
+                                    <span class="thm-stat-name">Rooms Completed</span>
+                                    <span class="thm-stat-val">52 Rooms</span>
+                                </div>
+                                <div class="thm-stat-row">
+                                    <span class="thm-stat-name">Learning Path</span>
+                                    <span class="thm-stat-val">Jr. Penetration Tester</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Learning Roadmap -->
+                    <div class="roadmap-card glass">
+                        <h3>Cybersecurity Roadmap</h3>
+                        <div class="roadmap-flow">
+                            <div class="roadmap-step completed">
+                                <h4>Pre-Security Basics <span class="roadmap-status comp">Done</span></h4>
+                                <p>Explored basic network structures, OSI model layers, and Linux CLI fundamentals.</p>
+                            </div>
+                            <div class="roadmap-step completed">
+                                <h4>Network Sockets & Python Scanners <span class="roadmap-status comp">Done</span></h4>
+                                <p>Coded custom scanning utility files and script scanners using socket modules.</p>
+                            </div>
+                            <div class="roadmap-step active">
+                                <h4>Junior Penetration Testing <span class="roadmap-status prog">In Progress</span></h4>
+                                <p>Working on TryHackMe pathways, privilege escalations, OWASP Top 10 vulnerabilities.</p>
+                            </div>
+                            <div class="roadmap-step">
+                                <h4>Advanced Defensive Operations <span class="roadmap-status plan">Planned</span></h4>
+                                <p>Future study on SIEM monitoring, Active Directory setups, and threat intelligence grids.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chronological Milestones -->
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                        </div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2025 - Present</span>
+                            <h3>B.Tech Program (First-Year)</h3>
+                            <span class="timeline-org">Computer Science & Engineering</span>
+                            <p>Began engineering studies, diving deep into computer systems, network baselines, databases, and Python automation workflows.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2025</span>
+                            <h3>TryHackMe Milestone</h3>
+                            <span class="timeline-org">Ethical Hacking Labs</span>
+                            <p>Completed 50+ security laboratories. Developed and compiled socket scanners for basic reconnaissance exercises.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2023 - 2025</span>
+                            <h3>Higher Secondary Education</h3>
+                            <span class="timeline-org">CBSE Curriculum</span>
+                            <p>Completed upper secondary education with a science block focus. Acquired basic algorithmic structures and logical networks knowledge.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.2 7.8 16.2 16.2 7.8 16.2 7.8 7.8 16.2 7.8"></polygon></svg>
+                        </div>
+                        <div class="timeline-content glass">
+                            <span class="timeline-date">2023</span>
+                            <h3>CBSE Class 10 Completion - 85%</h3>
+                            <span class="timeline-org">Secondary Education</span>
+                            <p>Graduated secondary schooling with an aggregate score of 85%, developing a foundational interest in technology and Linux shell terminals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Blogs and Write-ups Section -->
+                <div class="blogs-section-header">
+                    <h3>Technical Write-ups & Blogs</h3>
+                </div>
+                <div class="blogs-grid grid">
+                    <!-- Blog 1 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag">TryHackMe</span>
+                            <span>May 2026</span>
+                        </div>
+                        <h4>Hardening Linux System Services</h4>
+                        <p>A comprehensive walkthrough detailing service management, setting up firewalls, and closing unused TCP connections.</p>
+                        <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="blog-read-link">Read Write-up →</a>
+                    </div>
+
+                    <!-- Blog 2 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag">Networking</span>
+                            <span>Apr 2026</span>
+                        </div>
+                        <h4>Demystifying TCP Handshakes</h4>
+                        <p>Explaining SYN, SYN-ACK, and ACK flows, packet transmission controls, and socket timeouts in python.</p>
+                        <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="blog-read-link">Read Write-up →</a>
+                    </div>
+
+                    <!-- Blog 3 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag">Achievements</span>
+                            <span>Mar 2026</span>
+                        </div>
+                        <h4>Hackathons & Workshops Journey</h4>
+                        <p>Reflecting on key learning metrics and hands-on experiences gathered during local engineering hackathons and workshops.</p>
+                        <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="blog-read-link">Read Write-up →</a>
+                    </div>
+                </div>
+
+                <!-- Achievements & Certifications Block -->
+                <div class="blogs-section-header" style="margin-top: 50px;">
+                    <h3>Achievements & Certifications</h3>
+                </div>
+                <div class="blogs-grid grid" style="margin-bottom: 20px;">
+                    <!-- Achievement 1 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag" style="color: #f1c40f;">Badge</span>
+                            <span>TryHackMe</span>
+                        </div>
+                        <h4>Jr. Penetration Tester Pathway</h4>
+                        <p>Awarded on completion of advanced vulnerability testing rooms, privilege escalations, and active host scans.</p>
+                        <span class="view-details-link" style="font-size: 0.8rem; font-weight: 500;">Verified Achievement</span>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag" style="color: #f1c40f;">Workshop</span>
+                            <span>IEEE College Chapter</span>
+                        </div>
+                        <h4>Ethical Hacking Fundamentals</h4>
+                        <p>Successfully completed a hands-on cybersecurity workshop on system administration and web application attacks.</p>
+                        <span class="view-details-link" style="font-size: 0.8rem; font-weight: 500;">Certificate of Participation</span>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="blog-card glass">
+                        <div class="blog-card-header">
+                            <span class="blog-card-tag" style="color: #f1c40f;">Contest</span>
+                            <span>Technical Symposium</span>
+                        </div>
+                        <h4>Python Cryptography Challenge</h4>
+                        <p>Participated in local encryption challenge scripts testing socket payloads and cipher translation programs.</p>
+                        <span class="view-details-link" style="font-size: 0.8rem; font-weight: 500;">Symposium Nominee</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="container">
+                <div class="section-title-wrapper text-center">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid grid">
+                    <div class="contact-info glass">
+                        <h3>Reach Out Directly</h3>
+                        <p>Interested in collaborating on security projects, looking for a passionate intern, or just want to discuss cybersecurity trends? Feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div>
+                                    <span class="contact-method-title">Email Me</span>
+                                    <div class="email-copy-wrapper">
+                                        <span id="contact-email" class="contact-method-value">flamsinhere789@gmail.com</span>
+                                        <button id="copy-email-btn" class="copy-btn" aria-label="Copy email address to clipboard">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                            <span class="tooltip">Copy</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <span class="contact-method-title">Location</span>
+                                    <span class="contact-method-value">Kerala, India (Open to Remote)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials-wrapper">
+                            <span>Follow my updates:</span>
+                            <div class="social-icons">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper glass">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-row grid">
+                                <div class="form-group">
+                                    <label for="form-name">Your Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                    <span class="error-msg">Name is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                    <span class="error-msg">Please enter a valid email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="Collaboration / Intern Inquiry" required>
+                                <span class="error-msg">Subject is required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Let me know how we can work together..." required></textarea>
+                                <span class="error-msg">Message is required</span>
+                            </div>
+                            
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                                <span>Send Message</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                        <div id="form-success-alert" class="alert-box success-alert hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="alert-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <div>
+                                <h4>Message Sent Successfully!</h4>
+                                <p>Thank you. Fathima Hiba will get back to you shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container footer-container">
+            <p>&copy; 2026 Fathima Hiba V K. All rights reserved.</p>
+            <p class="footer-credit">Handcrafted with HTML, Vanilla CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-backdrop"></div>
+        <div class="modal-window glass">
+            <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-content" id="modal-body-content">
+                <!-- Injected dynamically by Javascript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Entry -->
+    <script src="script.js"></script>
+</body>
+</html>
