@@ -1,0 +1,5 @@
+[build]
+  publish = "./"
+  command = ""
+
+# Optional redirect rules can be added here
